@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainDefs>
+
+
+  <TerrainDef Name="FloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <statBases>
+      <WorkToMake>135</WorkToMake>
+    </statBases>
+    <designationCategory>Floors</designationCategory>
+    <Fertility>0</Fertility>
+    <constructEffect>ConstructDirt</constructEffect>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+
+  
+
+  <!-- ================= Misc ================= -->
+
+
+  <TerrainDef ParentName="FloorBase">
+    <DefName>PavedTile</DefName>
+    <label>paved tile</label>
+    <RenderPrecedence>230</RenderPrecedence>
+    <Description>Utilitarian concrete tiles. quick to move around on, good looking but slow to build.</Description>
+    <texturePath>Terrain/Surfaces/PavedTile</texturePath>
+    <statBases>
+      <WorkToMake>700</WorkToMake>
+      <Beauty>1</Beauty>
+    </statBases>
+    <CostList>
+      <Concrete>1</Concrete>
+    </CostList>
+    <designationHotkey>Misc5</designationHotkey>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>Concrete</defName>
+    <label>concrete</label>
+    <Description>Quick-poured concrete. Fast to walk on, very quick to pour and neutral in terms of looks.</Description>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <EdgeType>Hard</EdgeType>
+    <RenderPrecedence>70</RenderPrecedence>
+    <statBases>
+      <WorkToMake>30</WorkToMake>
+    </statBases>
+    <CostList>
+      <Concrete>1</Concrete>
+    </CostList>
+    <designationHotkey>Misc6</designationHotkey>
+  </TerrainDef>
+
+
+</TerrainDefs>
